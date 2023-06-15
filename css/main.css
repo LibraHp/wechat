@@ -1,0 +1,365 @@
+body{
+	width: 1362px;
+	margin: 10px auto;
+}
+/* 主窗口样式 */
+#mainwindow{
+	background-color: #F5F5F5;
+	display: flex;
+	flex-direction: row;
+	border: 2px solid #D6D6D6;
+}
+/* 左侧边栏 */
+#leftbar{
+	width: 80px;
+	background-color: #2E2E2E;
+	padding: 30px 0 10px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#barup{
+	margin: 0 auto;
+	align-self: flex-start;
+}
+
+#bardown{
+	margin: 0 auto;
+	align-self: flex-end;
+}
+
+#baritem{
+	width: 70px;
+	height: 70px;
+	margin: 5px auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+#baritem img{
+	max-width: 70%; 
+	max-height: 70%;
+}
+
+#barup #baritem:nth-child(2) img:hover {
+  content: url("../img/msg_hover.png");
+}
+
+#barup #baritem:nth-child(3) img:hover {
+  content: url("../img/person_hover.png");
+}
+
+#barup #baritem:nth-child(4) img:hover {
+  content: url("../img/minehave_hover.png");
+}
+
+#barup #baritem:nth-child(5) img:hover {
+  content: url("../img/file_hover.png");
+}
+
+#barup #baritem:nth-child(6) img:hover {
+  content: url("../img/friends_hover.png");
+}
+
+#barup #baritem:nth-child(7) img:hover {
+  content: url("../img/video_hover.png");
+}
+/* 消息列表 */
+#midwindow{
+	width: 27%;
+	background-color: #E1DFDE;
+}
+
+#search{
+	height: 10%;
+	background-color: #F7F7F7;
+	border-right: 2px solid #D6D6D6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+}
+
+#search-container{
+	display: flex;
+	align-items: center;
+	width: 340px;
+	height: 38px;
+	overflow: hidden;
+	margin-top: 15px;
+	justify-content: space-between;
+}
+#searchinput{
+	width: 90%;
+	background-color: #E2E2E2;
+	display: flex;
+	height: 38px;
+	border-radius: 5px;
+}
+#searchinput input[type="text"] {
+	flex: 1;
+	border: none;
+	outline: none;
+	padding: 0 10px;
+	background: none;
+	font-size: 1em;
+}
+
+#add-button {
+	margin-left: 10px;
+	width: 38px;
+	height: 38px;
+	border: none;
+	background-color: #E2E2E2;
+	border-radius: 5px;
+	text-align: center;
+	color: #5C5C5C;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#add-button:hover{
+	background-color: #D1D1D1;
+}
+/* 消息列表 */
+#listitem{
+	height: 95px;
+	background-color: #DCDBDB;
+	border: 2px solid #D6D6D6;
+}
+
+#personlist{
+	height: 800px;
+	overflow: hidden auto;
+}
+
+#listitem{
+	display: flex; 
+	align-items: center;
+	cursor: pointer;
+}
+
+#listitem:hover{
+	background-color: #D0D0D0;
+}
+
+#headpic{
+	width: 95px;
+	height: 95px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#listitem img{
+	max-width: 60%;
+	max-height: 60%;
+	align-self: center;
+}
+#info{
+	display: flex;
+	flex-direction: column;
+}
+
+#upinfo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+#inname{
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#intime{
+	margin-right: -115px;
+	font-size: 0.9em;
+	color: #A0A0A0;
+}
+
+#underinfo{
+	color: #A0A0A0;
+}
+/* 右侧窗口大小 */
+#rightwindow{
+	height: 100%;
+	width: 910px;
+}
+/* 右侧导航栏样式 */
+#rightnav{
+	height: 90px;
+	width: 100%;
+	border-bottom: 2px solid #D6D6D6;
+	background-color: #F5F5F5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#lnav{
+	flex: 1;
+	text-align: left;
+	font-size: 1.5em;
+	margin-left: 30px;
+}
+
+#rnav{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#rnavtop{
+	align-self: flex-end;
+	overflow: auto;
+}
+
+#rnavtop img{
+	 max-width: 90%;
+	 max-height: 90%;
+}
+
+#navbo{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#navbo:hover{
+	background-color: #E2E2E2;
+}
+
+#rnavbottom{
+	width: 30px;
+	height: 30px;
+	align-self: flex-end;
+	padding: 10px;
+	cursor: pointer;
+}
+/* 聊天窗口样式 */
+#chatwindow{
+	height: 520px;
+	background-color: #F5F5F5;
+	padding: 10px 30px;
+	overflow: auto;
+}
+
+#chatinput{
+	height: 250px;
+	width: 100%;
+	background-color: #F5F5F5;
+	border: 2px solid #ECECEC;
+}
+
+#chatpic img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#chatleft{
+	height: 55px;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 10px;
+}
+
+#chatright{
+	height: 55px;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 20px;
+}
+
+#chatmsg{
+	height: 80%;
+	margin: auto 20px;
+	padding: 5px 13px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+}
+/* 聊天窗口输入样式 */
+#chatnav{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+#chattool{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+#chattool img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#chatinput textarea{
+	width: 96%;
+	height: 50%;
+	resize: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 0 20px;
+	font-size: 1.5em;
+}
+
+#send{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#sendbt{
+	width: 150px;
+	height: 50px;
+	display: block;
+	background-color: #E9E9E9;
+	border-radius: 5px;
+	margin-right: 40px;
+	font-size: 1.3em;
+	color: #07C160;
+	text-align: center;
+	cursor: pointer;
+}
+
+#sendbt:hover{
+	background-color: #D2D2D2;
+}
+
+#sendbt text{
+	line-height: 50px;
+}
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px; /* 宽度 */
+  height: 8px;
+  background-color: #f5f5f5; /* 背景颜色 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  border-radius: 10px; /* 圆角 */
+  background-color: #f5f5f5;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* 圆角 */
+  background-color: #c1c1c1; /* 滑块颜色 */
+}
