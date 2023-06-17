@@ -1,16 +1,19 @@
-body{
+/* 设置整个页面的宽度和居中对齐 */
+body {
 	width: 1362px;
 	margin: 10px auto;
 }
+
 /* 主窗口样式 */
-#mainwindow{
+#mainwindow {
 	background-color: #F5F5F5;
 	display: flex;
 	flex-direction: row;
 	border: 2px solid #D6D6D6;
 }
+
 /* 左侧边栏 */
-#leftbar{
+#leftbar {
 	width: 80px;
 	background-color: #2E2E2E;
 	padding: 30px 0 10px 0;
@@ -19,17 +22,20 @@ body{
 	justify-content: space-between;
 }
 
-#barup{
+/* 左侧边栏上部分样式 */
+#barup {
 	margin: 0 auto;
 	align-self: flex-start;
 }
 
-#bardown{
+/* 左侧边栏下部分样式 */
+#bardown {
 	margin: 0 auto;
 	align-self: flex-end;
 }
 
-#baritem{
+/* 左侧边栏每个图标的样式 */
+#baritem {
 	width: 70px;
 	height: 70px;
 	margin: 5px auto;
@@ -37,41 +43,45 @@ body{
 	cursor: pointer;
 }
 
-#baritem img{
-	max-width: 70%; 
+/* 左侧边栏每个图标中的图片样式 */
+#baritem img {
+	max-width: 70%;
 	max-height: 70%;
 }
 
+/* 左侧边栏每个图标的鼠标悬停样式 */
 #barup #baritem:nth-child(2) img:hover {
-  content: url("../img/msg_hover.png");
+	content: url("../img/msg_hover.png");
 }
 
 #barup #baritem:nth-child(3) img:hover {
-  content: url("../img/person_hover.png");
+	content: url("../img/person_hover.png");
 }
 
 #barup #baritem:nth-child(4) img:hover {
-  content: url("../img/minehave_hover.png");
+	content: url("../img/minehave_hover.png");
 }
 
 #barup #baritem:nth-child(5) img:hover {
-  content: url("../img/file_hover.png");
+	content: url("../img/file_hover.png");
 }
 
 #barup #baritem:nth-child(6) img:hover {
-  content: url("../img/friends_hover.png");
+	content: url("../img/friends_hover.png");
 }
 
 #barup #baritem:nth-child(7) img:hover {
-  content: url("../img/video_hover.png");
+	content: url("../img/video_hover.png");
 }
+
 /* 消息列表 */
-#midwindow{
+#midwindow {
 	width: 27%;
 	background-color: #E1DFDE;
 }
 
-#search{
+/* 消息列表搜索框样式 */
+#search {
 	height: 10%;
 	background-color: #F7F7F7;
 	border-right: 2px solid #D6D6D6;
@@ -81,7 +91,8 @@ body{
 	font-size: 1em;
 }
 
-#search-container{
+/* 消息列表搜索框容器样式 */
+#search-container {
 	display: flex;
 	align-items: center;
 	width: 340px;
@@ -90,13 +101,16 @@ body{
 	margin-top: 15px;
 	justify-content: space-between;
 }
-#searchinput{
+
+/* 消息列表搜索框输入框样式 */
+#searchinput {
 	width: 90%;
 	background-color: #E2E2E2;
 	display: flex;
 	height: 38px;
 	border-radius: 5px;
 }
+
 #searchinput input[type="text"] {
 	flex: 1;
 	border: none;
@@ -106,6 +120,7 @@ body{
 	font-size: 1em;
 }
 
+/* 消息列表搜索框添加按钮样式 */
 #add-button {
 	margin-left: 10px;
 	width: 38px;
@@ -119,32 +134,36 @@ body{
 	cursor: pointer;
 }
 
-#add-button:hover{
+#add-button:hover {
 	background-color: #D1D1D1;
 }
-/* 消息列表 */
-#listitem{
+
+/* 消息列表样式 */
+#listitem {
 	height: 95px;
 	background-color: #DCDBDB;
 	border: 2px solid #D6D6D6;
 }
 
-#personlist{
+/* 消息列表容器样式 */
+#personlist {
 	height: 800px;
 	overflow: hidden auto;
 }
 
-#listitem{
-	display: flex; 
+/* 消息列表每个消息项的样式 */
+#listitem {
+	display: flex;
 	align-items: center;
 	cursor: pointer;
 }
 
-#listitem:hover{
+#listitem:hover {
 	background-color: #D0D0D0;
 }
 
-#headpic{
+/* 消息列表每个消息项中的头像样式 */
+#headpic {
 	width: 95px;
 	height: 95px;
 	display: flex;
@@ -153,44 +172,48 @@ body{
 	align-items: center;
 }
 
-#listitem img{
+#listitem img {
 	max-width: 60%;
 	max-height: 60%;
 	align-self: center;
 }
-#info{
+
+/* 消息列表每个消息项中的信息样式 */
+#info {
 	display: flex;
 	flex-direction: column;
 }
 
-#upinfo{
+#upinfo {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 16px;
 }
 
-#inname{
+#inname {
+	width: 210px;
 	font-weight: bold;
 	font-size: 1.3em;
 }
 
-#intime{
-	margin-right: -115px;
+#intime {
 	font-size: 0.9em;
 	color: #A0A0A0;
 }
 
-#underinfo{
+#underinfo {
 	color: #A0A0A0;
 }
+
 /* 右侧窗口大小 */
-#rightwindow{
+#rightwindow {
 	height: 100%;
 	width: 910px;
 }
+
 /* 右侧导航栏样式 */
-#rightnav{
+#rightnav {
 	height: 90px;
 	width: 100%;
 	border-bottom: 2px solid #D6D6D6;
@@ -200,14 +223,16 @@ body{
 	align-items: center;
 }
 
-#lnav{
+/* 右侧导航栏左部分样式 */
+#lnav {
 	flex: 1;
 	text-align: left;
 	font-size: 1.5em;
 	margin-left: 30px;
 }
 
-#rnav{
+/* 右侧导航栏右部分样式 */
+#rnav {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -215,17 +240,19 @@ body{
 	justify-content: center;
 }
 
-#rnavtop{
+/* 右侧导航栏右上部分样式 */
+#rnavtop {
 	align-self: flex-end;
 	overflow: auto;
 }
 
-#rnavtop img{
-	 max-width: 90%;
-	 max-height: 90%;
+#rnavtop img {
+	max-width: 90%;
+	max-height: 90%;
 }
 
-#navbo{
+/* 右侧导航栏右下部分样式 */
+#navbo {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
@@ -234,52 +261,57 @@ body{
 	cursor: pointer;
 }
 
-#navbo:hover{
+#navbo:hover {
 	background-color: #E2E2E2;
 }
 
-#rnavbottom{
+#rnavbottom {
 	width: 30px;
 	height: 30px;
 	align-self: flex-end;
 	padding: 10px;
 	cursor: pointer;
 }
+
 /* 聊天窗口样式 */
-#chatwindow{
+#chatwindow {
 	height: 520px;
 	background-color: #F5F5F5;
 	padding: 10px 30px;
 	overflow: auto;
 }
 
-#chatinput{
+/* 聊天窗口输入框样式 */
+#chatinput {
 	height: 250px;
 	width: 100%;
 	background-color: #F5F5F5;
 	border: 2px solid #ECECEC;
 }
 
-#chatpic img{
+#chatpic img {
 	max-width: 100%;
 	max-height: 100%;
 }
 
-#chatleft{
+#chatleft {
 	height: 55px;
 	display: flex;
 	justify-content: flex-start;
 	margin-top: 10px;
 }
 
-#chatright{
+#chatright {
 	height: 55px;
 	display: flex;
 	flex-direction: row-reverse;
 	margin-top: 20px;
 }
-
-#chatmsg{
+#chatright #chatmsg{
+	background-color: #95EC69;
+}
+/* 聊天窗口消息样式 */
+#chatmsg {
 	height: 80%;
 	margin: auto 20px;
 	padding: 5px 13px;
@@ -289,26 +321,27 @@ body{
 	align-items: center;
 	font-size: 1.2em;
 }
+
 /* 聊天窗口输入样式 */
-#chatnav{
+#chatnav {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
 }
 
-#chattool{
+#chattool {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
 	cursor: pointer;
 }
 
-#chattool img{
+#chattool img {
 	max-width: 100%;
 	max-height: 100%;
 }
 
-#chatinput textarea{
+#chatinput textarea {
 	width: 96%;
 	height: 50%;
 	resize: none;
@@ -319,13 +352,13 @@ body{
 	font-size: 1.5em;
 }
 
-#send{
+#send {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-#sendbt{
+#sendbt {
 	width: 150px;
 	height: 50px;
 	display: block;
@@ -338,28 +371,29 @@ body{
 	cursor: pointer;
 }
 
-#sendbt:hover{
+#sendbt:hover {
 	background-color: #D2D2D2;
 }
 
-#sendbt text{
+#sendbt text {
 	line-height: 50px;
 }
+
 /* 自定义滚动条 */
 ::-webkit-scrollbar {
-  width: 8px; /* 宽度 */
-  height: 8px;
-  background-color: #f5f5f5; /* 背景颜色 */
+	width: 8px;
+	height: 8px;
+	background-color: #f5f5f5;
 }
 
 /* 滚动条轨道 */
 ::-webkit-scrollbar-track {
-  border-radius: 10px; /* 圆角 */
-  background-color: #f5f5f5;
+	border-radius: 10px;
+	background-color: #f5f5f5;
 }
 
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px; /* 圆角 */
-  background-color: #c1c1c1; /* 滑块颜色 */
+	border-radius: 10px;
+	background-color: #c1c1c1;
 }

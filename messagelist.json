@@ -1,0 +1,56 @@
+{
+    "name":"宋豪峰",
+    "chatpic":"img/mine.jpg",
+    "messagelist": [
+        {"type":"right" , "msg":"儿子叫爸爸"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"}
+    ]
+},
+{
+    "name":"张根瑞",
+    "chatpic":"img/mine.jpg",
+    "messagelist": [
+        {"type":"right" , "msg":"儿子叫爸爸"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"}
+    ]
+},
+{
+    "name":"王锦源",
+    "chatpic":"img/mine.jpg",
+    "messagelist": [
+        {"type":"right" , "msg":"儿子叫爸爸"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"}
+    ]
+},
+{
+    "name":"宋豪峰",
+    "chatpic":"img/mine.jpg",
+    "messagelist": [
+        {"type":"right" , "msg":"儿子叫爸爸"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"},
+        {"type":"left" , "msg":"我是你儿子"}
+    ]
+}

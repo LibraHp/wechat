@@ -31,21 +31,21 @@
 					</div>
 				</div>
 				<div id="personlist">
-					<div id="listitem">
+					<div id="listitem" onclick="changeText()">
 						<span id="headpic">
 							<img src="img/mine.jpg">
 						</span>
 						<div id="info">
 							<div id="upinfo">
-								<span id="inname">测试名字</span>
+								<span id="inname">我爱你</span>
 								<span id="intime">23:46</span>
 							</div>
 							<div id="underinfo">
-								测试名字: 测试消息
+								我爱你: 测试消息
 							</div>
 						</div>
 					</div>
-					<div id="listitem">
+					<div id="listitem" onclick="changeText()">
 						<span id="headpic">
 							<img src="img/mine.jpg">
 						</span>
@@ -190,7 +190,7 @@
 			<div id="rightwindow">
 				<div id="rightnav">
 					<div id="lnav">
-						<span>宋豪峰</span>
+						<span id="chattitle">宋豪峰</span>
 					</div>
 					<div id="rnav">
 						<div id="rnavtop">
@@ -218,7 +218,7 @@
 							<div id="chatpic">
 								<img src="img/shf.jpg">
 							</div>
-							<div id="chatmsg" style="background-color: #95EC69;">
+							<div id="chatmsg">
 								爸爸
 							</div>
 						</div>
@@ -294,5 +294,12 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			function changeText() {
+				var myParagraph = document.getElementById("inname");
+				var text = myParagraph.textContent;
+				document.getElementById("chattitle").textContent = text;
+			}
+		</script>
 	</body>
 </html>
