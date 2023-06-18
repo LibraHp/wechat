@@ -133,9 +133,9 @@
 							<span id="chattool"><img src="img/videotel.png"></span>
 						</div>
 					</div>
-					<textarea></textarea>
+					<textarea id="sendtext"></textarea>
 					<div id="send">
-						<span id="sendbt">
+						<span id="sendbt" onclick="sendmsg()">
 							<text>发送(S)</text>
 						</span>
 					</div>
@@ -149,14 +149,12 @@
 					"chatpic":"img/shf.jpg",
 					"time":"23:59",
 					"messagelist": [
-						{"type":"right" , "msg":"儿子叫爸爸"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"},
-						{"type":"left" , "msg":"我是你儿子"}
+						{"type":"right" , "msg":"发疯文学"},
+						{"type":"left" , "msg":"自从得了精神病"},
+						{"type":"left" , "msg":"整个人都精神多了"},
+						{"type":"left" , "msg":"我要做一条粪坑里的蛆"},
+						{"type":"left" , "msg":"每天趴着都有饭吃"},
+						{"type":"left" , "msg":"扭曲"}
 					]
 				},
 				{
@@ -217,8 +215,9 @@
 					let newDiv = document.createElement("div");
 					// 添加样式类
 					newDiv.setAttribute("id","listitem");
+					showmsg(msgjson[0].name,msgjson[0].chatpic,msgjson[0].messagelist,i);
 					newDiv.innerHTML = `
-						<div id="listitem" onclick="showmsg(msgjson[${i}].name,msgjson[${i}].chatpic,msgjson[${i}].messagelist)">
+						<div id="listitem" onclick="showmsg(msgjson[${i}].name,msgjson[${i}].chatpic,msgjson[${i}].messagelist,${i})">
 							<span id="headpic">
 								<img src="${list.chatpic}">
 							</span>
@@ -239,9 +238,11 @@
 				}
 			}
 			showpersonlist();
-			function showmsg(name,chatpic,messagelist) {
-				//messagelist = JSON.parse(messagelist);
-				console.log(messagelist);
+			function showmsg(name,chatpic,messagelist,i) {
+				// 获取要设置data-*属性的div元素
+				let sendbt = document.querySelector('#sendbt');
+				// 设置data-flag属性的值为true
+				sendbt.setAttribute('data-flag', i);
 				document.getElementById("chattitle").innerHTML = name;
 				document.getElementById("chatinfo").innerHTML = "";
 				for(let message of messagelist){
@@ -261,6 +262,33 @@
 					container.appendChild(newDiv);
 				}
 			}
+			function sendmsg(){
+				// 获取带有data-flag属性的div元素
+				let sendbt = document.querySelector('#sendbt[data-flag]');
+				// 获取data-flag属性的值
+				let flagValue = sendbt.getAttribute('data-flag');
+				console.log(flagValue);
+				// 获取指定的div元素
+				let container = document.getElementById("chatinfo");
+				// 创建一个新的div元素
+				let newDiv = document.createElement("div");
+				let textarea = document.getElementById("sendtext");
+				let content = textarea.value;
+				if(content){
+					newDiv.setAttribute("id","chatright");
+					newDiv.innerHTML = `<div id="chatpic"><img src="img/mine.jpg"></div><div id="chatmsg">${content}</div>`;
+					msgjson[flagValue].messagelist.push({"type":"right","msg":content});
+					container.appendChild(newDiv);
+				}
+				textarea.value = "";
+			}
+			document.getElementById("sendtext").addEventListener("keydown", function(event) {
+				if (event.keyCode === 13) {
+					event.preventDefault(); // 阻止默认的回车键行为
+					sendmsg();
+				}
+			});
+
 		</script>
 	</body>
 </html>
