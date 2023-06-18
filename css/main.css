@@ -204,6 +204,9 @@ body {
 
 #underinfo {
 	color: #A0A0A0;
+	height: 20px;
+	width: 230px;
+	overflow: hidden;
 }
 
 /* 右侧窗口大小 */
