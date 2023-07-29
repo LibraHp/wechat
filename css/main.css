@@ -310,9 +310,11 @@ body {
 	flex-direction: row-reverse;
 	margin-top: 20px;
 }
-#chatright #chatmsg{
+
+#chatright #chatmsg {
 	background-color: #95EC69;
 }
+
 /* 聊天窗口消息样式 */
 #chatmsg {
 	height: 80%;
